@@ -3,25 +3,30 @@ import { appContext } from "../App";
 import Cards from "./Cards";
 import CardsQ from "./CardsQ";
 import FormData from "./PostData";
+import ECards from "./EditCards";
 
 function Body() {
-  const { DiplayScoreBoard, DiplayQuiz, DiplayCreateScoreBoard  } = useContext(appContext);
-
-
+  const {
+    DiplayScoreBoard,
+    DiplayQuiz,
+    DisplayCreateScoreBoard,
+    DisplayEditScoreBoard,
+  } = useContext(appContext);
 
   if (DiplayScoreBoard === true) {
     return <Cards />;
-  } 
-  if  (DiplayQuiz === true) {
+  }
+  if (DiplayQuiz === true) {
     return <CardsQ />;
-  } 
-   if  (DiplayCreateScoreBoard === true) {
+  }
+  if (DisplayCreateScoreBoard === true) {
     return <FormData />;
   }
-  // else {
-  //   return <div></div>;
-  // }
-
+  if (DisplayEditScoreBoard === true) {
+    return <ECards />;
+  } else {
+    return <div></div>;
+  }
 }
 
 export default Body;

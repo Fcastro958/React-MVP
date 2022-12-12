@@ -22,7 +22,7 @@ function FormData() {
   };
   return (
     <div className="form-container">
-      <h1>Submit your New Menu Items Here!</h1>
+      <h1>JOIN THE SCOREBOARD</h1>
     <form className="signup-form" onSubmit={handleSubmit}>
         <input type="text"
           required 

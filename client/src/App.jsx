@@ -9,7 +9,12 @@ function App() {
   const [DiplayScoreBoard, setDisplayScoreBoard] = useState(false);
   const [QuizData, setQuizData] = useState([{}]);
   const [DiplayQuiz, setDisplayQuiz] = useState(false);
+
   const [DisplayCreateScoreBoard, setDisplayCreateScoreBoard]= useState(false)
+  
+  const [EditScoreBoard, setEditScoreBoard]= useState([{}]);
+  const [DisplayEditScoreBoard, setDisplayEditScoreBoard]= useState(false)
+  
 
   const contextData = {
     scoreBoardData,
@@ -21,7 +26,11 @@ function App() {
     DiplayQuiz,
     setDisplayQuiz,
     DisplayCreateScoreBoard, 
-    setDisplayCreateScoreBoard
+    setDisplayCreateScoreBoard,
+    EditScoreBoard,
+    setEditScoreBoard,
+    DisplayEditScoreBoard,
+    setDisplayEditScoreBoard
   };
 
   useEffect(() => {
@@ -29,6 +38,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setScoreBoardData(data);
+        setEditScoreBoard(data);
         console.log(data);
       });
   }, []);
