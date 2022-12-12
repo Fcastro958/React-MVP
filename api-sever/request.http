@@ -1,0 +1,38 @@
+### testing if express works 
+GET http://localhost:3000
+
+### getting all questions from database
+GET http://localhost:3000/quiz
+
+### get questions by id from database
+GET http://localhost:3000/quiz/2
+
+###
+GET http://localhost:3000/scoreboard
+
+###
+GET http://localhost:3000/scoreboard/2
+
+###
+POST http://localhost:3000/scoreboard
+Content-Type: application/json
+
+{
+    "name":"bob",
+    "age":10,
+    "score":0
+}
+
+###
+DELETE http://localhost:3000/scoreboard/3
+
+### 
+PATCH http://localhost:3000/scoreboard/3
+Content-Type: application/json
+
+{
+
+     "name":"huy jr",
+    "age":20,
+    "score":0
+}
